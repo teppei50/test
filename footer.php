@@ -1,85 +1,111 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja
+">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <title>cafe-cafe</title>
-    <link rel="stylesheet" href="style.css" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
 <footer>
-    <div class="footer-main">
-        <div class="footer-flex">
-            <div class="footer">
-                <div class="footer-block">
-                    <div class="footer-inner">
-                        <h3>企業情報</h3>
-                        <ul>
-                            <li><a href="#">ご利用方法</a></li>
-                            <li><a href="#">ニュースルーム</a></li>
-                            <li><a href="#">株式・投資家のみなさまへ</a></li>
-                            <li><a href="#">XXXXXXXXXXXXXXX</a></li>
-                            <li><a href="#">XXXXXXXXXXXXXXX</a></li>
-                            <li><a href="#">XXXXXXXXXXXXXXX</a></li>
-                            <li><a href="#">採用情報</a></li>
-                        </ul>
-                    </div>
-                </div>
+    <div class="outer">
+        <div class="nav_area">
+            <div class="inner">
+                <h2>企業情報</h2>
+                <ul>
+                    <li>
+                        <a herf="#">ご利用方法</a>
+                    </li>
+                    <li>
+                        <a href="#">ニュースルーム</a>
+                    </li>
+                    <li>
+                        <a href="#">株主・投資家のみなさまへ</a>
+                    </li>
+                    <li>
+                        <a href="#">XXXXXXXXXXXXXXX</a>
+                    </li>
+                    <li>
+                        <a href="#">XXXXXXXXXXXXXXX</a>
+                    </li>
+                    <li>
+                        <a href="#">XXXXXXXXXXXXXXX</a>
+                    </li>
+                    <li>
+                        <a href="#">採用情報</a>
+                    </li>
+                </ul>
             </div>
-            <div class="footer">
-                <div class="footer-block">
-                    <div class="footer-inner">
-                        <h3>コミュニティ</h3>
-                        <ul>
-                            <li><a href="#">ダイバーシティ</a></li>
-                            <li><a href="#">アクセシビリティ対応</a></li>
-                            <li><a href="#">お友達を招待</a></li>
-                            <li><a href="#">XXXXXXXXXXXXXXX</a></li>
-                            <li><a href="#">XXXXXXXXXXXXXXX</a></li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="inner">
+                <h2>コミュニティ</h2>
+                <ul>
+                    <li>
+                        <a href="#">ダイバーシティ</a>
+                    </li>
+                    <li>
+                        <a href="#">アクセシビリティ対応</a>
+                    </li>
+                    <li>
+                        <a href="#">お友達を招待</a>
+                    </li>
+                    <li>
+                        <a href="#">XXXXXXXXXXXXXXX</a>
+                    </li>
+                    <li>
+                        <a href="#">XXXXXXXXXXXXXXX</a>
+                    </li>
+                </ul>
             </div>
-            <div class="footer">
-                <div class="footer-block">
-                    <div class="footer-inner">
-                        <h3>ホスト</h3>
-                        <ul>
-                            <li><a href="#">XXXXXXXXXXXXXXX</a></li>
-                            <li><a href="#">XXXXXXXXXXXXXXX</a></li>
-                            <li><a href="#">XXXXXXXXXXXXXXX</a></li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="inner">
+                <h2>ホスト</h2>
+                <ul>
+                    <li>
+                        <a href="#">XXXXXXXXXXXXXXX</a>
+                    </li>
+                    <li>
+                        <a href="#">XXXXXXXXXXXXXXX</a>
+                    </li>
+                    <li>
+                        <a href="#">XXXXXXXXXXXXXXX</a>
+                    </li>
+                </ul>
             </div>
-            <div class="footer">
-                <div class="footer-block">
-                    <div class="footer-inner">
-                        <h3>サポート</h3>
-                        <ul>
-                            <li><a href="#">新型コロナウイルスに対する取り組み</a></li>
-                            <li><a href="#">ヘルプセンター</a></li>
-                            <li><a href="#">キャンセルオプション</a></li>
-                            <li><a href="#">コミュニティサポート</a></li>
-                            <li><a href="#">信頼&安全</a></li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="inner">
+                <h2>サポート</h2>
+                <ul>
+                    <li>
+                        <a href="#">新型コロナウイルスに対する取り組み</a>
+                    </li>
+                    <li>
+                        <a href="#">ヘルプセンター</a>
+                    </li>
+                    <li>
+                        <a href="#">キャンセルオプション</a>
+                    </li>
+                    <li>
+                        <a href="#">コミュニティサポート</a>
+                    </li>
+                    <li>
+                        <a href="#">信頼&安全</a>
+                    </li>
+                </ul>
             </div>
         </div>
-            <div class="small">
-                <p>このサイトの素材は全て著作権フリーのものを使用しています。</p>
-                <div class="menu">
-                    <span>プライバシーポリシー</span>
-                    <span>利用規約</span>
-                    <span>サイトマップ</span>
-                    <span>企業情報</span>
-                </div>
+        <div class="reserved">
+            <p>このサイトの素材は全て著作権フリーのものを使用しています。</p>
+            <div class="menu">
+                <span class="_click">プライバシーポリシー</span>
+                <span class="_click">利用規約</span>
+                <span class="_click">サイトマップ</span>
+                <span class="_click">企業情報</span>
             </div>
-            <p class="LiNew">©︎ 2021- LiNew, Inc. All rights reserved.</p>
+            <p>© 2021-LiNew, Inc. All rights reserverd.</p>
+        </div>
     </div>
 </footer>
+
 </body>
 </html>

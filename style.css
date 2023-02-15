@@ -1,870 +1,520 @@
-@charset "UTF-8";
+@charset "utf-8";
 
-body{
+body, h1, h2, h3, p, ul, li, img {
     margin: 0;
-}
-ul{
-    margin-block-start: 0;
-    margin-block-end: 0;
-    padding-inline-start: 0;
-}
-.corona{
-    position: absolute;
-    width: 100%;
-    top: 0;
-    z-index: 10;
-    background-color: black;
-    text-align: center;
-    margin: 0 auto;
-    opacity: 1;
-}
-.corona a{
-    color: white;
-    align-items: center;
-    justify-content: center;
-    line-height: 60px;
-}
-/* サインイン */
-.header-flex #signin-button{
-    color: white;
+    padding: 0;
     border: none;
-    outline: none;
-    background: transparent;
+    font-size: 100%;
+    font-style: normal;
+    text-align: left;
+    list-style-type: none;
+    border-collapse: collapse;
+}
+
+.covid {
+    color: white;
     font-size: 15px;
-}
-.header-flex #sign-in{
-    position: absolute;
-}
-.header-flex #sign-in{
+    text-align: center;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    line-height: 50px;
-    left: 90%;
-}
-
-/* ログイン画面 */
-#login-main{
-    position: fixed;
-	top: 20rem;
-	left: 0;
-	width: 100vw;
-	height: 100%;
-	text-align: center;
-	background: rgba(0,0,0,50%);
-	overflow: hidden;
-    margin: 0;
-	opacity: 0;
-	visibility: hidden;
-	transition: .3s;
-    box-sizing: border-box;
-    z-index: 9999;
-}
-#login-main.active{
-	opacity: 1;
-	visibility: visible;
-    top: 0;
-}
-.login-box{
-	position: relative;
-	display: inline-block;
-	vertical-align: middle;
-	width: 40%;
-    height: 73%;
-    background: #fff;
-    border-radius: 12px;
-	text-align: left;
-	padding: 0 0 35px 0;
-    overflow: hidden;
-    margin-top: 7.5rem;
-}
-.login-box h3{
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-align: center;
-    padding: 0;
-    width: 100%;
-    box-sizing: border-box;
-    /* margin-block-start: 0;
-    margin-block-end: 0; */
-}
-.border-login{
-    border-bottom: 1px solid #ccc;
-    width: 100%;
-    padding: 0;
-    margin-bottom: 25px;
-}
-.border-login-s{
-    border-bottom: 1px solid #ccc;
-    width: 100%;
-    padding: 0;
-}
-.sns img{
-    height: 25px;
-    width: 25px;
-}
-.sns{
-    width: 100%;
-    text-align: center;
-}
-.twitter{
-    border: 1px solid #aaa;
-    width: 100%;
-    padding: 10px 44%;
-    border-radius: 8px;
-    margin-top: 20px;
-    margin-bottom: 5px;
-}
-.facebook{
-    border: 1px solid #aaa;
-    width: 100%;
-    padding: 10px 44%;
-    border-radius: 8px;
-    margin-bottom: 5px;
-}
-.google{
-    border: 1px solid #aaa;
-    width: 100%;
-    padding: 10px 44%;
-    border-radius: 8px;
-    margin-bottom: 5px;
-}
-.apple{
-    border: 1px solid #aaa;
-    width: 100%;
-    padding: 10px 44%;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-.login-form{
-    padding: 0 20px 0 20px;
-}
-.login-form input{
-    width: 99%;
-    font-size: 1.2rem;
-    padding: 10px 2px;
-    border-radius: 8px;
-    border: 1px solid #aaa;
-}
-.login-form .email{
-    margin-bottom: 10px;
-}
-.login-form .password{
-    margin-bottom: 10px;
-}
-.login-form button{
-    color: white;
-    background-color: rgb(215, 4, 102);
-    width: 100%;
-    font-size: 1.2rem;
-    padding: 10px 2.5px;
-    border: 0;
-    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 50px;
+    text-decoration: underline;
+    text-decoration-color: white;
     cursor: pointer;
-    margin-bottom: 20px;
+    padding: 0px;
+    margin: 0px;
 }
 
-/* home */
-.home{
+header {
     position: relative;
-    z-index: 1;
-    background-position: center;
-    background-size: cover;
-    background-image: url(img/eyecatch.jpg);
-    height: 90vh;
     width: 100%;
-    opacity: 0.85;
+    min-height: 680px;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/eyecatch.jpg);
+    opacity: 0.8;
 }
-.home h1{
-    position: relative;
-    z-index: 5;
-    color: white;
-    font-size: 60px;
-    padding: 0 5%;
-}
-.concept{
-    top: 200px;
-    line-height: 60px;
-}
-
-/* ヘッダー */
-.header-main{
+header nav.change-color {
+    background-color: rgba(0,0,0,0.9);
+    z-index: 2;
+    width: 100%;
+    position: fixed;
     top: 0;
+    transition:all .5s ease;
+    box-sizing: border-box;
 }
-.cafe-cafe-header{
+header nav .logo {
+    flex: 25%;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+header nav .logo img {
+    vertical-align: middle;
+}
+header nav {
     position: relative;
     top: 0;
     margin: auto;
-    z-index: 999;
+    padding: 0 5%;
+    background-color: transparent;
     display: flex;
-    width: 100%;
     flex-wrap: wrap;
     padding-top: 15px;
-    height: 130px;
+    color: white;
 }
-.change{
-    display: flex;
-    position: fixed;
-    width: 100%;
-    flex-wrap: wrap;
-    padding-top: 15px;
-    background-color: black;
-    height: 70px;
-    top: 0;
+header nav .g_nav .menu, header nav .g_nav .menu_click1,
+header nav .g_nav .menu_click2 {
+    padding: 0 25px;
+    cursor: pointer;
 }
-.move{
-    transform: translate(0 , -4rem);
-}
-.cafe-cafe-header ul{
-    list-style: none;
-    text-decoration: none;
-}
-.cafe-cafe-header ul a{
+header nav .g_nav .menu a {
     text-decoration: none;
     color: white;
 }
-.header-flex{
-    margin: 0 auto;
-    width: 100%;
-    align-items: center;
+header nav .g_nav {
+    flex: 50%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     line-height: 50px;
-    transform: translate(0,-110px);
 }
-.fmove{
-    transform: translate(0,-170px);
-}
-.header-flex a{
-    padding: 0 25px;
-}
-
-/* ハンバーガーメニュー */
-.hamburger-main{
-    display: flex;
-    justify-content: flex-end;
-}
-.hamburger-img{
-    opacity: 0;
-    padding-top: 1rem;
-    padding-right: 2rem;
-}
-.hmove{
-    top: -3rem;
-}
-.hamburger-menu{
-    opacity: 0;
-    list-style: none; 
-    z-index: 9000;
-    width: 12rem;
-    background-color: white;
-    border-radius: 8px;
-    margin-top: 8rem;
-    right: 2rem;
-    height: 12rem;
-    margin-right: 1rem;
-    box-shadow: 0 10px 25px 0 rgb(100 100 100 / 50%);
-}
-.hamburger-menu #signin-button{
-    text-align: left;
-    color: black;
-    border: none;
-    outline: none;
-    background: transparent;
-    font-size: 18px;
-    width: 100%;
-    padding-top: 6px;
-}
-.hamburger-menu a{
-    text-decoration: none;
-    color: black;
-}
-.border {
-    border-top: 1px solid #ccc;
-    padding-bottom: 4px;
-}
-.hamburger-menu li{
-    font-size: 18px;
-    padding: 6px 1rem 8px 1rem;
-}
-
-/* 各エリア */
-.prefecture{
+header nav .sign {
+    flex: 25%;
     display: flex;
     flex-wrap: wrap;
-    margin: 5%;
+    line-height: 50px;
+    justify-content: flex-end;
 }
-.prefecture img{
-    width: 65px;
-    height: 65px;
-    object-fit: cover;
-    border-radius: 10%;
-}
-.prefecture p{
-    font-weight: 600;
-    font-size: 0.9rem;
-    margin-block-start: 0;
-    margin-block-end: 0;
-}
-.place{
-    padding: 5px 15px;
-    margin-right: 11.5%; 
-    padding-bottom: 3%;
-    
-}
-/* 鹿児島・沖縄だけずれる為微調整 */
-.kagoshima{
-    margin-left: -1.5%;
-}
-/* topに戻るボタン */
-.top-button {
-    position: fixed; 
-    right: 0; 
-    bottom: 0;
-    opacity: 0; 
-    z-index: 100; 
-    background-color: black;
-    color: white;
-    padding: 0 10px;
-    height: 50px;
-    width: 8rem;
-    font-size: large;
-    outline: none;
-    border: none;
-    transition: all .3s ease;
+header nav .sign .signin_click {
+    cursor: pointer;
 }
 
-/* 好きなロケーション */
-.location-block{
-    padding-right:  1.5%;
+header nav .sp_nav {
+    position: fixed;
+    background-color: white;
+    border-radius: 8px;
+    width: 200px;
+    top: 125px;
+    right: 40px;
+    visibility: hidden;
 }
-.location-title{
-    margin: 5%;
+header nav .sp_signin_click {
+    color: black;
+    border-bottom: 1px solid #ccc;
+    padding: 15px;
+    cursor: pointer;
 }
-.favorite-location{
+header nav .sp_menu_click1, header nav .sp_menu_click2, header nav .menu {
+    color: black;
+    padding: 15px;
+    cursor: pointer;
+}
+.concept {
+    width: 90%;
+    margin: auto;
+    position: absolute;
+    top: 250px;
+    left: 5%;
+    color: white;
+    font-size: 65px;
+    line-height: 65px;
+    font-weight: bold;
+}
+
+section {
+    margin: 40px 0;
+    padding: 0 5%;
+}
+section p {
+    font-size: 15px;
+}
+.cafe_intro {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.cafe_intro .box{
+    padding: 10px 0;
+}
+.cafe_intro .info {
     display: flex;
-    margin: 5%;
+    justify-content: flex-start;
 }
-.location-in-the-block .location-img{
-    height: 210px;
-    width: 300px;
+.cafe_intro .photo {
+    width: 65px;
+    height: 65px;
 }
-.location-in-the-block .location-img img{
-    height: 100%;
+.cafe_intro .photo img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 8px;
 }
-.location-in-the-block p{
-    font-weight: 600;
+.cafe_intro .access {
+    padding: 5px 15px;
 }
-/* Go To Eats */
-.goto{
-    margin: 5%;
+.access .area {
+    font-weight: bold;
+}
+
+.bg_white {
+    background-color: white;
+    color: black;
+}
+section h2{
+    font-size: 32px;
+    font-weight: bold;
+}
+.cafe_local {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 15px;
+}
+.cafe_local .box {
+    padding: 10px 0;
+}
+.cafe_local .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.cafe_local .text {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.goto {
+    margin-top: 40px;
     opacity: 0.9;
     position: relative;
 }
-.goto img{
-    
-    width: 100%;
-    border-radius: 15px;
-}
-.goto-text{
-    z-index: 30;
+.goto_text {
     position: absolute;
     top: 50px;
     left: 50px;
     background-color: rgba(255,255,255,0.3);
     padding: 10px;
 }
-.goto-text h1{
-    font-size: 42px;
-    margin-block-start: 0;
-    margin-block-end: 0;
+.goto_text h3 {
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+    margin: 0;
 }
-.goto-text p{
+.goto_text p {
     font-size: 18px;
-    margin-block-start: 0;
-    margin-block-end: 0;
+    font-weight: 100;
+    color: black;
+    margin: 0;
 }
-/* カフェ作りを体験しよう */
-.cafe-making-experience{
+
+.bg_black {
     background-color: black;
-}
-.experience-margin{
-    padding: 20px 5%;
-}
-.experience-block{
-    margin-right: 1%;
-}
-.experience-title{
     color: white;
-    font-size: 30px;
-    margin-block-start: 0;
-    margin-block-end: 0;
+    padding: 40px 5%;
 }
-.experience-sub-title{
-    font-weight: 600;
-    color: white;
-    margin-block-start: 0;
+section h2 {
+    font-size: 32px;
+    font-weight: bold;
 }
-.experience-info{
-    color: white;
-
+.cafe_exp {
+    margin: 15px auto 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 15px;
 }
-.experience-info h3{
-    margin-block-start: 0;
-    margin-block-end: 0;
+.cafe_exp .box {
+    padding: 10px 0;
 }
-.experience-info p{
-    margin-block-start: 0;
-    margin-block-end: 2rem;
-}
-.experience-flex{
-    display: flex;
-}
-.experience-in-the-block .experience-img{
-    height: 500px;
-    width: 400px;
-}
-.experience-in-the-block .experience-img img{
-    height: 100%;
+.cafe_exp .photo img {
     width: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-/* 全国のホストに仲間入りしよう */
-.joining-main{
-    margin: 5%;
-}
-.joining-main h2{
-    font-size: 30px;
-    margin-block-start: 0;
-    margin-block-end: 0.5rem;
-}
-.joining-flex{
-    display: flex;
-}
-.joining-block{
-    margin-right: 1%;
-}
-.joining-in-the-block .joining-img{
-    height: 250px;
-    width: 400px;
-}
-.joining-in-the-block .joining-img img{
     height: 100%;
-    width: 100%;
     object-fit: cover;
     border-radius: 8px;
 }
-.joining-info p{
-    font-weight: 600;
-    margin-block-start: 0.5rem;
+.cafe_exp .text {
+    font-size: 18px;
+    font-weight: bold;
+}
+.cafe_exp p {
+    font-size: 15px;
+    font-weight: 100;
 }
 
-/* フッター */
-footer{
+.cafe_host {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 15px;
+}
+.cafe_host .box {
+    padding: 10px 0;
+}
+.cafe_host .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.cafe_host .text {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+footer {
     border-top: 1px solid #ddd;
     background-color: #f7f7f7;
-    padding: 4% 0;
+    padding: 5% 0;
+    display: block;
 }
-.footer-main{
+footer .outer {
     width: 90%;
-}
-.footer-flex{
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    justify-content: space-around;
-    margin-bottom: 0.5%;
-}
-.footer-inner h3{
-    font-size: medium;
-    margin-block-start: 0;
-    margin-block-end: 0;
-}
-.footer-inner ul{
-    padding-inline-start: 0;
-}
-.footer-inner li{
-    list-style: none;
-    margin: 1rem 0;
+    margin: auto;
     font-size: 15px;
 }
-.footer-inner li a{
-    text-decoration: none;
-    color: black;
+footer .nav_area {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
-.small{
-    border-top: 1px solid black;
-    margin-left: 5.5%;
+footer .inner {
+    flex: auto;
+}
+footer .inner h2 {
+    font-weight: bold;
+}
+footer .inner li {
+    margin: 15px 0;
+}
+footer .inner a {
+    color: #333;
+}
+footer .reserved {
     padding-top: 2%;
-    font-size: 14px;
-}
-.small p{
-    margin-block-start: 0;
-    margin-block-end: 0;
-}
-.LiNew{
-    font-size: 14px;
-    margin-left: 5.5%;
-    margin-block-start: 0;
-    margin-block-end: 0;
+    border-top: 1px solid #ccc;
+    color: #333;
 }
 
-/* お問い合わせフォーム */
-
-/* 入力画面 */
-.inpuiry-form{
-    width: 60%;
-    margin: 5% auto;
-    border: 1px solid #ccc;
-    border-radius: 16px;
-}
-.inpuiry-form h3{
+.jump {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    height: 45px;
+    line-height: 45px;
+    color: white;
     text-align: center;
-    margin: 0 auto;
-    font-size: 1rem;
-    padding: 1rem 0;
+    background-color: black;
+    padding: 0px 10px;
+    cursor: pointer;
+}
+
+.overlay.overlay {
+    height: 100vh;
+    width: 100%;
+    background: black;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.form-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 1;
+}
+.active {
+    visibility: visible;
+}
+.form {
+    width: 350px;
+    background-color: white;
+    border-radius: 8px;
+}
+.form .login {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    border-bottom: 1px solid #ccc;
+    padding: 15px;
+}
+.form .form_send {
+    padding: 15px;
     border-bottom: 1px solid #ccc;
 }
-.contact-form{
+.form input[type="email"], .form input[type="password"], .contact input[type="password"]{
+    width: 90%;
+    padding: 10px;
+    margin: 5px;
+    font-size: 20px;
+    border-radius: 8px;
+}
+.form input[type="submit"], .contact_content input[type="submit"], .contact .confirm_button .confirm_send{
+    background: white;
+    font-size: 20px;
+    text-align: center;
+    background-color: #D70466;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+}
+.form .sns {
+    padding: 15px;
+}
+.form .sns button {
+    background-color: white;
+    width: 100%;
+    border: 1px sold #ccc;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+.form .sns img {
+    width: 20px;
+}
+
+
+.contact {
+    width: 70%;
+    margin: 5% auto;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    margin: 5% auto;
+}
+.contact h2 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+.contact form {
     margin: 3%;
 }
-.contact-alert{
-    background-color: rgb(230, 230, 230);
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
+.contact h3 {
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
     padding: 1%;
-    margin-top: 2rem;
+    margin: 1%;
+    background-color: #eaeaea;
+    font-weight: normal;
 }
-.red{
+.contact p {
+    font-weight: normal;
+    font-size: 15px;;
+}
+.contact .required {
     color: red;
 }
-.entry{
-    padding: 10px 2.5px;
-    font-size: 1rem;
-    line-height: 40px;
-}
-.inpuiry-area input{
-    width: 99%;
-    font-size: 1.2rem;
-    padding: 10px 3px;
-    border-radius: 8px;
-    border: 1px solid #aaa;
-}
-.inpuiry-area-alert input{
-    width: 99%;
-    font-size: 1.2rem;
-    padding: 10px 3px;
-    border-radius: 8px;
-    border: 1px solid #aaa;
-}
-.inpuiry-area-alert input{
+.contact input {
     width: 100%;
-    margin: 0;
-    font-size: 1.2rem;
+    font-size: 18px;
     padding: 10px 3px;
     border-radius: 8px;
     border: 1px solid #aaa;
-    background-color: rgb(215, 4, 102);
-    color: white;
+    box-sizing: border-box;
 }
-.inpuiry-area p{
-    margin-block-start: 0;
-    margin-block-end: 0;
-} 
-.inpuiry-area-alert p{
-    margin-block-start: 0.8rem;
-    margin-block-end: 0;
-} 
-.entry-field{
-    margin-top: 1.5rem;
-}
-.entry-field textarea{
-    word-break: break-all;
-    margin: 0;
-    font-size: 1.2rem;
+.contact textarea {
+    resize: none;
+    width: 100%;
+    height: 300px;
     padding: 10px 3px;
-    width: 99%;
-    height: 15rem;
     border-radius: 8px;
     border: 1px solid #aaa;
+    box-sizing: border-box;
 }
-/* エラー表示 */
-.error{
-    color: red;
+.contact_content {
+    margin: 2% 0;
+}
+.contact dt {
+    border-bottom: 1px solid #ccc;
+    margin-top: 15px;
+}
+.contact dd {
+    font-size: 18px;
+    text-align: left;
+    margin: 2px;
 }
 
-/* 確認画面 */
-.confirm-main{
-    width: 60%;
-    margin: 5% auto;
-    border: 1px solid #ccc;
-    border-radius: 16px;
-}
-.confirm-main h3{
-    text-align: center;
-    margin: 0 auto;
-    font-size: 1rem;
-    padding: 1rem 0;
-    border-bottom: 1px solid #ccc;
-}
-.confirm-form{
-    margin: 3%;
-}
-.confirm-form p{
-    font-size: 15px;
-}
-.confirm-alert{
-    padding-left: 3px;
-}
-.confirm-btn{
+.contact .confirm_button {
     display: flex;
+    justify-content: space-between;
+    margin: 5px;
 }
-.confirm-btn .send{
+.contact .confirm_button a {
     width: 100%;
-    font-size: 1.2rem;
-    border-radius: 8px;
-    border: 1px solid #aaa;
-    background-color: rgb(215, 4, 102);
-    color: white;
-    height: 3rem;
-}
-.confirm-btn .back{
-    width: 100%;
-    text-align: center;
+    line-height: 40px;
     margin-left: 10px;
     background-color: transparent;
     border: 2px solid #066;
     border-radius: 8px;
     cursor: pointer;
     color: #066;
-    height: 3rem;
+    text-align: center;
+    font-size: 20px;
+    margin: 5px;
+    text-decoration: none;
 }
 
-/* 完了画面 */
-.contact_box{
-    border: 1px solid rgba(211, 211, 211, 1.2);
-    border-radius: 10px;
-    width: 60%;
-    margin: 5% auto;
-}
-.contact_box form{
-    width: 90%;
-}
-h7{
-    font-size: 1.25rem;
-    font-weight: 600;
-    display: block;
-    margin: 3% 0 3% 0;
-    padding-left: 40%;
-    border-bottom: 1px solid rgba(211, 211, 211, 1.2);
-    width: 60%;
-}
-.complete-message p{
+.complete_text {
+    padding: 3%;
     font-size: 15px;
-    margin-block-start: 0;
-    margin-block-end: 0;
+}
+.complete_text a {
+    display: block;
+    margin-top: 10px;
 }
 
-/*レスポンシブ*/
-@media screen and (max-width: 768px) {
-    body{
-        max-width: 768px;
-    }
-    .home{
-        height: 110vh;
-    }
-    .concept {
-        top: 240px;
-        position: fixed;
-    }
-    .home h1{
 
-        position: absolute;
-    }
-    .header-flex{
+@media screen and (min-width: 896px) {
+    header nav .sign img {
         display: none;
     }
-    .hamburger-img{
-        float: right;
-        z-index: 9999;
-        opacity: 1;
-        width: 7%;
-        position: absolute;
-        padding-top: 4rem;
+}
+
+@media screen and (max-width: 896px) {
+    header nav .g_nav, header nav .sign .signin_click {
+        display: none;
     }
-    .hamburger-main{
-        margin: 0 0 0 auto;       
+    header nav .sign img {
+        width: 50px;
+        cursor: pointer;
     }
-    .hamburger-menu{
-        box-shadow: 0 10px 25px 0 rgb(100 100 100 / 50%);
+    header nav .sign, footer .nav_area {
+        display: block;
     }
-    .open{
-        z-index: 9999;
-        position: fixed;
-        opacity: 1;
-    }
-    .prefecture{
+    .cafe_intro, .cafe_local {
         grid-template-columns: repeat(2, 1fr);
     }
-    .place{
-        margin-right: 0;
-        padding-right: 10px;
+    .goto_text {
+        position: static;
+        top: 25;
+        left: 25;
     }
-    .prefecture p{
-        margin-block-end: 1rem;
-        width: 4.5rem;
-        word-wrap: break-word;
+    footer .inner h2 {
+        border-bottom: 1px solid #ccc;
     }
-    .kagoshima{
-        margin-left: 0;
-    }
-    .favorite-location{
-        flex-wrap: wrap;
-    }
-    .location-block{
-        padding-left: 5px;
-    }
-    .location-in-the-block .location-img {
-        height: 250px;
-        width: 310px;
-    }
-    .experience-in-the-block .experience-img {
-        height: 250px;
-        width: 200px;
-    }
-    .joining-block {
-        margin-right: 2%;
-    }
-    .joining-in-the-block .joining-img {
-        height: 150px;
-        width: 210px;
-    }
-    .footer-main{
-        width: 96%;
-    }
-    .footer-flex{
-        flex-wrap: nowrap;
-        margin-left: 5%;
-    }
-    /* お問い合わせフォーム */
-    .inpuiry-form {
-        width: 80%;
-    }
-    .contact-form p{
-        font-size: 14px;
-    }
-    .contact_box{
-        width: 80%;
-    }
-    /* ログインボックス */
-    .login-box{
-        width: 50%;
-        margin-top: 5.5rem;
-    }
-    .login-box h3{
-        padding: 0; 
-        margin-block-start: 0;
-    }
-    .twitter,.facebook,.google,.apple{
-        padding: 10px 10.5rem;
+    .contact{
+        width: 98%;
     }
 }
 
-/*section*/
-.contact-box{
-    width: 60%;
-    margin: 80px auto;
-    border: #ccc solid 1px;
-    border-radius: 15px;
-}
-.contact-box h2{
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 20px;
-    border-bottom: #ccc solid 1px;
-}
-.contact-box form{
-    margin: 20px;
-}
-.contact-box form h3{
-    padding: 10px;
-    margin: 15px 0;
-    background-color: #f5f5f5;
-    border-bottom: #000 solid 1px;
-    border-top: #000 solid 1px ;
-}
-.contact-box form .c-text{
-    margin: 10px 0;
-    font-size: 13px;
-}
-.contact-box form input{
-    width: 100%;
-    height: 50px;
-    margin: 5px 0;
-    font-size: 20px;
-    border-radius: 8px;
-    border: 1px solid #aaa;
-}
-.send_btn{
-    background-color: rgb(215, 4, 102);
-    color: white;
-}
-.contact-box form .body textarea{
-    width: 100%;
-    height: 300px;
-    margin: 10px 0;
-    border-radius: 8px;
-    font-size: 20px;
-}
-.contact-box form .confirm dd .ditail{
-    font-size: 20px;
-    border-top: #ccc solid 1px;
-    padding: 5px 0;
-    margin: 5px 0;
-}
-.contact-box form .body dd .ditail{
-    font-size: 20px;
-    margin: 10px 0;
-}
-dd{
-    margin-inline-start: 0;
-    word-break: break-all;
-}
-
-/*DB*/
-table{
-	border: 1px solid #000;
-	margin: auto;
-    margin-bottom: 20px;
-}
-table{
-    border-collapse: unset;
-    border-spacing: 0;
-}
-tr{
-    text-align: center;
-}
-th{
-    padding: 10px;
-}
-td{
-    border-top: 1px solid #000;
-    border-right: 1px solid #000;
-    padding: 5px;
-}
-.boder-right{
-    border-right: 1px solid #000;
-}
-th{
-    text-align: center;
-}
-.err-msg-name{
-    color: red;
+@media screen and (max-width: 500px){
+    .cafe_intro {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .cafe_exp {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
